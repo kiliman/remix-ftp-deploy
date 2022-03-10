@@ -39,7 +39,7 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           localDir: 'public'
           remoteDir: 'www'
-          options: '--delete --asci'
+          options: '--verbose --ascii'
 
       - name: 🚀 FTP server file to host
         uses: sebastianpopp/ftp-action@releases/v2
@@ -49,3 +49,4 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           localDir: 'dist'
           remoteDir: 'www'
+          options: '--verbose --ascii'
